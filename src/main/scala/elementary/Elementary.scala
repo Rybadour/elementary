@@ -5,9 +5,15 @@ import js.Dynamic.{ global => g }
 object Elementary {
   def main(): Unit = {
 
+    var str: String = ""
+
     // Alpha:
     // Attempt to have an component like Velocity require Position
     // Using self => Type attempt a variety of weird uses
+    var b = new Ball(3, 5)
+    b.x += 2
+    b.y += 55
+    str += "B = " + b.render()
 
     // Beta:
     // Attempt to have an entity expose a custom access interface
@@ -19,11 +25,14 @@ object Elementary {
     // Should call specially defined one
     var renderer = new TextThing("Blah be blah")
     renderer.x = 23
-    var str: String = foo(renderer)
+    str += "<br />" + foo(renderer)
 
     // Something:
     // Handling multiple traits with the same base traits
     var obj = new Ball(3, 5)
+    obj.x += 2
+    obj.y += 10
+    str += "<br />" + "Obj = "+ foo(obj)
 
     // Something else:
     // Handling traits with the same private field
