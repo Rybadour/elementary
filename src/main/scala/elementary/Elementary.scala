@@ -15,6 +15,9 @@ object Elementary {
     b.y += 55
     str += "B = " + b.render()
 
+	// Should error on compile
+	//var c = new Entity() with Velocity
+
     // Beta:
     // Attempt to have an entity expose a custom access interface
     // Such as a custom to_string method
