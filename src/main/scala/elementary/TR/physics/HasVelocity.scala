@@ -5,7 +5,7 @@ trait HasVelocity {
 
   val velocity: Position2 = new Position2(0, 0)
 
-  def apply() = {
+  def apply_velocity() = {
     this.position += velocity
   }
 }

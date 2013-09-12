@@ -4,6 +4,10 @@ import js.Dynamic.{ global => g }
 
 object Elementary {
   def main(): Unit = {
+    
+    val game = new MyTestGame("playground-canvas");
+
+    return;
 
     var str: String = ""
 
