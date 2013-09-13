@@ -8,7 +8,7 @@ class MyTestGame(canvasId: String) extends SimpleGame(canvasId) {
     var playerPaddle: Paddle = new Paddle(this);
     var enemyPaddle: Paddle  = new Paddle(this);
 
-    var playerEndZone: RectRegion = new RectRegion();
+    var playerEndZone:  = new RectRegion();
     var enemyEndZone: RectRegion  = new RectRegion();
 
     var playerScore: Int = 0;
