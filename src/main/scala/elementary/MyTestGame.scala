@@ -14,18 +14,23 @@ class MyTestGame(canvasId: String) extends SimpleGame(canvasId) {
     var playerScore: Int = 0;
     var enemyScore: Int  = 0;
 
+    // Controllers
+    var player: Player = new Player(playerPaddle);
+
     override def update(msTimeStep: Int) {
 
       super.update(msTimeStep);
+
+      player.update(msTimeStep);
+
       /* *
       // Should be inside super i guess
       ball.update(msTimeStep);
-      playerPaddle.update(msTimeStep);
       enemyPaddle.update(msTimeStep);
       /* */
 
       if (collider.checkCollision(ball, playerPaddle) || collider.checkCollision(ball, enemyPaddle)) {
-        ball.x *= -1;
+        ball.reverse();
       }
 
       if (collider.checkCollision(ball, playerEndZone)) {

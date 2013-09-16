@@ -7,4 +7,8 @@ class Ball(game: MyTestGame, _x: Int, _y: Int) extends Entity(game)
 {
     x = _x
     y = _y
+
+    def reverse() = {
+      this.x *= -1;
+    }
 }
